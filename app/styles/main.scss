@@ -12,6 +12,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 body {
   padding: 0;
+  background-color:#34495e;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -24,9 +25,6 @@ body {
 
 /* Custom page header */
 .header {
-  border-bottom: 1px solid #e5e5e5;
-  margin-bottom: 10px;
-
   /* Make the masthead heading the same height as the navigation */
   h3 {
     margin-top: 0;
@@ -40,7 +38,6 @@ body {
 .footer {
   padding-top: 19px;
   color: #777;
-  border-top: 1px solid #e5e5e5;
 }
 
 .container-narrow > hr {
@@ -82,10 +79,69 @@ body {
   }
   /* Space out the masthead */
   .header {
-    margin-bottom: 30px;
+    margin-bottom: 0px;
   }
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {
     border-bottom: 0;
   }
+}
+
+.h2Style{
+	background-color:#2c3e50;
+	color:WHITE;
+	margin-bottom:0px;
+	padding-top:10px;
+	padding-bottom:10px;
+	font-size: 24px;	
+}
+
+.h3Style{
+	background-color:#1abc9c;
+	color:WHITE;
+	margin-bottom:0px;
+	padding-top:10px;
+	padding-bottom:10px;
+	font-size: 18px;
+}
+
+.component{
+	background-color:#ecf0f1;
+	margin-top:0px;
+}
+
+.navbar{
+	margin-bottom:0px;
+}
+
+.userIcon{
+	margin-top:30px;
+	margin-bottom:0px;
+	width:25%;
+}
+
+.userName{
+	color:#8b51f5;
+	margin-top:0px;	
+	margin-bottom:30px;
+}
+
+.baseText{
+	font-size: 18px;
+	font-family:Roboto;
+}
+
+.noMargin{
+	margin-bottom:0px;
+	margin-top:0px;	
+}
+
+.helveticaTexte{
+	font-family: Helvetica; 
+	margin-bottom:0px;
+}
+
+.sessionEnd{
+	font-size: 14px;
+	margin-top:30px;
 }

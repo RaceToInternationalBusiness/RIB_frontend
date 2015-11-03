@@ -1,0 +1,25 @@
+	<div class="col-md-3">
+			
+		<div class="row">
+			<div class="col-md-12">
+				<h2 class="text-center h2Style">Overview</h2>
+				<div class="text-center component">
+					<img class="userIcon" src="images/account_circle.png"/> 
+					<p class="userName baseText">{{dashboard.userName}}</p>
+					<p class="baseText noMargin">CA actuel : {{dashboard.ca}}€</p>
+					<p class="baseText noMargin">Bénéfice : {{dashboard.profit}}€</p>
+					<h3 class="h3Style">Reminder</h3>
+					<p class="baseText">Année N°{{dashboard.yearNumber}}</p>
+					<p class="helveticaTexte sessionEnd">Fin de session dans : </p>
+					<p class="baseText helveticaTexte"><strong>{{dashboard.getRemainTime()}}</strong></p>
+				</div> 
+			</div>
+		</div>
+		
+	</div>
+
+	<div class="col-md-9" >
+
+	</div>
+	
+	
