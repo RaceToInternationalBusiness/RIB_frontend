@@ -22,5 +22,5 @@ angular.module('ribFrontendApp')
     
     this.getRemainTime = function(){
     	return "6 Heures 38 Minutes";
-    }
+    };
   });
