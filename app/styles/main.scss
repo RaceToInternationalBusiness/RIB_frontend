@@ -7,6 +7,7 @@ body {
     padding: 0;
     background-color:#34495e;
     font-family: "Roboto",Helvetica;
+    padding-bottom: 20px;
 }
 
 .navbar{
@@ -52,6 +53,31 @@ button
 .control-label
 {
     text-align: right;
+    height: 34px;
+    line-height: 34px;
+}
+
+.float-element
+{
+    float: left;
+    min-height: 34px;
+    line-height: 34px;
+    min-width: 120px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background: white;
+    color:grey;
+}
+
+.float-element i
+{
+    float: right;
+    line-height: 34px;
+    margin-right: 5px;
+}
+.float-element i:hover
+{
+    cursor:pointer;
 }
 
 textarea
@@ -62,13 +88,21 @@ textarea
     background: white;
     border:none;
 }
-.h2Style{
+
+.form-control 
+{
+    background: white;
+    border: none;
+    border-radius:0px;
+}
+h2{
 	background-color:#2c3e50;
 	color:WHITE;
 	margin-bottom:0px;
 	padding-top:10px;
 	padding-bottom:10px;
 	font-size: 24px;	
+    text-align: center;
 }
 
 .h3Style{
@@ -80,9 +114,29 @@ textarea
 	font-size: 18px;
 }
 
-.component{
+.component
+{
 	background-color:#ecf0f1;
 	margin-top:0px;
+}
+
+.page
+{
+    background-color:#ecf0f1;
+    padding-top:20px;
+    padding-bottom: 20px;
+}
+
+.page span
+{
+    height: 34px;
+    line-height: 34px;
+    margin-left: 10px;
+}
+
+.page input[type="checkbox"]
+{
+    margin: 5px;
 }
 
 .userIcon{

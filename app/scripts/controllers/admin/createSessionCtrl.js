@@ -20,6 +20,11 @@ angular.module('ribFrontendApp')
         //ne pas valider si email non correcte
         $scope.emails="";
     };
+      
+      $scope.removeElement = function(id)
+      {
+          $scope.session.participants.splice(id,1);
+      };
 
     $scope.markets = [
         {

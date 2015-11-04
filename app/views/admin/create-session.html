@@ -1,13 +1,14 @@
 <div class="col-md-3">	
-    <h2 class="text-center h2Style">Overview</h2>
-    <div class="text-center component">
+    <h2 class="text-center h2Style">Navigation</h2>
+    <div class="component">
 
     </div> 
 </div>
 
 <div class="col-md-9" >
-    <h2 class="text-center h2Style">Nouvelle Session</h2>
-    <div class="text-center component">
+    <div class="row">
+    <h2 class="">Nouvelle Session</h2>
+    <div class="col-md-12 text-center page">
         <form>
             <fieldset class="form-group">
                     <label class="col-md-4 control-label">Nom de la session: </label>
@@ -24,7 +25,7 @@
             <fieldset class="form-group">
                 <label class="col-md-4 control-label">Produits: </label>
                 <div class="col-md-4">
-                    <span ng-repeat="product in session.market.products" style="float:left">{{product.name}}<input class="form-control input-md"  type="checkbox" ng-model="product.checked" ng-change="selectedProducts()"></span>
+                    <span ng-repeat="product in session.market.products">{{product.name}}<input  type="checkbox" ng-model="product.checked" ng-change="selectedProducts()"></span>
                 </div>
             </fieldset>
             <fieldset class="form-group">
@@ -49,14 +50,17 @@
                 </div>
             </fieldset>
             <fieldset class="form-group">
-                <div class="col-md-1" ng-repeat="p in session.participants">{{p}}<i class=" glyphicon glyphicon-remove"></i></div>
-                <span ng-show="session.participants.length==0">Vous devez ajouter des participants avant de continuer...</span>
+                <div class="col-md-7 col-md-offset-2">
+                    <div class="float-element" ng-repeat="p in session.participants">{{p}}<i class=" glyphicon glyphicon-remove" ng-click="removeElement($index)"></i></div>
+                    <span ng-show="session.participants.length==0">Vous devez ajouter des participants avant de continuer...</span>
+                </div>
             </fieldset>
             <div class="col-md-1 col-md-offset-7 ">
                 <button ng-click="createSession()">Valider</button>
             </div>
         </form>
-    </div> 
+    </div>
+        </div>
 </div>
 	
 	
