@@ -2,16 +2,19 @@
 			
 		<div class="row">
 			<div class="col-md-12">
-				<h2 class="text-center h2Style">Overview</h2>
-				<div class="text-center component">
-					<img class="userIcon" src="images/account_circle.png"/> 
-					<p class="userName baseText">{{dashboard.userName}}</p>
-					<p class="baseText noMargin">CA actuel : {{dashboard.ca}}€</p>
-					<p class="baseText noMargin">Bénéfice : {{dashboard.profit}}€</p>
-					<h3 class="h3Style">Reminder</h3>
-					<p class="baseText">Année N°{{dashboard.yearNumber}}</p>
-					<p class="helveticaTexte sessionEnd">Fin de session dans : </p>
-					<p class="baseText helveticaTexte"><strong>{{dashboard.getRemainTime()}}</strong></p>
+				<h2 class="text-center">Overview</h2>
+				<div class="text-center informations">
+					<img class="user-icon" src="images/account_circle.png"/> 
+					<p class="user-name">{{dashboard.userName}}</p>
+					<p class="no-margin">CA actuel : {{dashboard.ca}}€</p>
+					<p class="no-margin">Bénéfice : {{dashboard.profit}}€</p>
+					<h3>Reminder</h3>
+					<p>Année N°{{dashboard.yearNumber}}</p>
+					<p  class="session-end">
+						<span>Fin de session dans : </span>
+						<br>
+						<span class="no-margin"><strong>{{dashboard.getRemainTime()}}</strong></span>
+					</p>
 				</div> 
 			</div>
 		</div>
@@ -19,7 +22,16 @@
 	</div>
 
 	<div class="col-md-9" >
+		<div class="row">
+			<div class="col-md-12">
+				<div class="work well clearfix">
+						<p class="vertical-alignement">Compléter la feuille de décision</p>				
+						<button class="btn pull-right access-button" ng-click="accessToDecisionSheet();">Accéder</button>
 
+				</div>
+				
+			</div>
+		</div>
 	</div>
 	
 	
