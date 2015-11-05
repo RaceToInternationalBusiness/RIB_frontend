@@ -20,12 +20,12 @@ angular
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/dashboard.html',
+        templateUrl: 'views/client/dashboard.html',
         controller: 'DashboardCtrl',
         controllerAs: 'dashboard'
       })
       .when('/dashboard', {
-        templateUrl: 'views/dashboard.html',
+        templateUrl: 'views/client/dashboard.html',
         controller: 'DashboardCtrl',
         controllerAs: 'dashboard'
       })
