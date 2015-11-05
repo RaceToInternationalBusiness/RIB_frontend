@@ -44,7 +44,7 @@ body {
 button
 {
     min-height: 35px;
-    min-width: 120px;
+    min-width: 20px;
     border: none;
     border-radius:none;
     color:white;
@@ -59,10 +59,39 @@ button
     background: #40d47e;
 }
 
+
 .info-text
 {
     color: #3498db;
 }
+
+.btn-square
+{
+	width:34px;
+	height:34px;
+	background-color:#c0c0c0;
+	color:#ffffff;
+	font-size:18;
+}
+
+.btn-square-desactivated
+{
+	width:34px;
+	height:34px;
+	background-color:#34495e;
+	color:#ffffff;
+	font-size:18;
+}
+
+.btn-square-selec
+{
+	width:34px;
+	height:34px;
+	background-color:#2ecc71;
+	color:#ffffff;
+	font-size:18;
+}
+
 .control-label
 {
     text-align: right;
@@ -109,7 +138,8 @@ textarea
     border-radius:0px;
 }
 
-header{
+header
+{
 	background-color:#2c3e50;
 	color:white;
 	padding-top:5px;
@@ -133,10 +163,13 @@ h2
     font-size: 30px;
 }
 
-h3{
+h3
+{
 	background-color:#1abc9c;
 	color:white;
 	margin-bottom:0px;
+	color:#ffffff;
+	margin-bottom:0em;
 	padding-top:0.55em;
 	padding-bottom:0.55em;
 	font-size: 18px;
@@ -146,6 +179,19 @@ h4
 {
     font-size: 30px;
     text-align: center;
+}
+.sub-header
+{
+	background-color:#2ecc71;
+	color:#ffffff;
+	margin-bottom:0em;
+	padding-top:0.55em;
+	padding-bottom:0.55em;
+	font-size: 18px;
+	text-align: center;
+    
+    
+    
 }
 
 .page
@@ -162,6 +208,8 @@ h4
     margin: 5px;
     max-width: 30%;
 }
+
+
 
 .page span
 {
@@ -181,6 +229,16 @@ h4
 	width:25%;
 }
 
+.info-icon{
+	width:10%;
+}
+
+.machine-icon{
+}
+
+.askquestion-icon{
+}
+
 .user-name{
 	color:#8b51f5;
 	margin-top:0em;	
@@ -198,9 +256,14 @@ span{
 	margin-top:50px;
 }
 
+
 .descriptions
 {
     text-align: justify;
+}
+.time-left{
+	font-size:18px;
+ 	font-weight: bold;
 }
 
 .no-margin{
@@ -227,3 +290,15 @@ span{
 	top: 50%;
 	transform: translateY(-50%);
  }
+ 
+.form-center{
+	display:inline-block;
+}
+ 
+.text_ita{
+ 	font-size: 14px;
+	font-family: Roboto;
+ 	font-style: italic;
+ 	padding-left:0.0em;
+ }
+ 
