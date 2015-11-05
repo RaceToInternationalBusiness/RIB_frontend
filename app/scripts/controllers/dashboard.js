@@ -9,12 +9,7 @@
  */
 angular.module('ribFrontendApp')
   .controller('DashboardCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-    
+
     this.userName = "Coucou c'est moi !";
     this.ca = 200000;
     this.profit = -30000;

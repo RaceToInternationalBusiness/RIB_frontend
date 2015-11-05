@@ -31,6 +31,16 @@ body {
     height: 35px;
 }
 
+.wrapper
+{
+    margin-top: 20px;
+}
+
+.side-panel
+{
+    text-align: center;
+}
+
 button
 {
     min-height: 35px;
@@ -49,6 +59,10 @@ button
     background: #40d47e;
 }
 
+.info-text
+{
+    color: #3498db;
+}
 .control-label
 {
     text-align: right;
@@ -95,33 +109,58 @@ textarea
     border-radius:0px;
 }
 
-h2{
+header{
 	background-color:#2c3e50;
-	color:WHITE;
-	margin-bottom:0px;
-	padding-top:0.416em;
-	padding-bottom:0.416em;
+	color:white;
+	padding-top:5px;
+	padding-bottom:5px;
 	font-size: 24px;	
     text-align: center;
+    margin-top: 0;
+}
+
+h1,h2
+{
+    text-align: center;
+    font-size: 70px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+h2
+{
+    font-size: 30px;
 }
 
 h3{
 	background-color:#1abc9c;
-	color:#ffffff;
+	color:white;
 	margin-bottom:0px;
 	padding-top:0.55em;
 	padding-bottom:0.55em;
 	font-size: 18px;
 }
 
+h4
+{
+    font-size: 30px;
+    text-align: center;
+}
+
 .page
 {
     background-color:#ecf0f1;
+    padding-top:20px;
     padding-bottom: 1.428em;
+    margin: 0;
+    margin-bottom: 20px;
 }
 
-.no-title{
-	margin-top:1.428em;
+.page img
+{
+    margin: 5px;
+    max-width: 30%;
 }
 
 .page span
@@ -157,6 +196,11 @@ span{
 	font-family: Helvetica; 
 	font-size: 14px;
 	margin-top:50px;
+}
+
+.descriptions
+{
+    text-align: justify;
 }
 
 .no-margin{
