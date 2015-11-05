@@ -1,0 +1,66 @@
+<div class="col-md-3">	
+    <h2 class="text-center h2Style">Navigation</h2>
+    <div class="component">
+
+    </div> 
+</div>
+
+<div class="col-md-9" >
+    <div class="row">
+    <h2 class="">Nouvelle Session</h2>
+    <div class="col-md-12 text-center page">
+        <form>
+            <fieldset class="form-group">
+                    <label class="col-md-4 control-label">Nom de la session: </label>
+                    <div class="col-md-4">
+                        <input class="form-control input-md" ng-model="session.name" type="text" placeholder="Ex:ALMA2015"/>
+                    </div>
+            </fieldset>
+            <fieldset class="form-group">
+                <label class="col-md-4 control-label">Marché: </label>
+                <div class="col-md-4">
+                    <select ng-model="session.market" ng-init="session.market = markets[0]" class="form-control input-md" ng-options="market.name for market in markets "></select>
+                </div>
+            </fieldset>
+            <fieldset class="form-group">
+                <label class="col-md-4 control-label">Produits: </label>
+                <div class="col-md-4">
+                    <span ng-repeat="product in session.market.products">{{product.name}}<input  type="checkbox" ng-model="product.checked" ng-change="selectedProducts()"></span>
+                </div>
+            </fieldset>
+            <fieldset class="form-group">
+                <label class="col-md-4 control-label">Années: </label>
+                <div class="col-md-4">
+                    <select ng-model="session.years" class="form-control input-md" >
+                        <option  value="1" selected="selected">1</option>
+                        <option  value="2">2</option>
+                        <option  value="3">3</option>
+                        <option  value="4">4</option>
+                        <option  value="5">5</option>
+                    </select>
+                </div>
+            </fieldset>
+            <fieldset class="form-group">
+                <div class="col-md-12"><label class="col-md-4 control-label">Ajouter des participants: </label></div>
+                <div class="col-md-7 col-md-offset-2 ">
+                    <textarea ng-model="emails" class="form-control input-md" placeholder="john.doe@gmail.com,..."></textarea>
+                </div>
+                <div class="col-md-1 col-md-offset-7 ">
+                <button class="btn-action" ng-click="processEmails()">Ajouter</button>
+                </div>
+            </fieldset>
+            <fieldset class="form-group">
+                <div class="col-md-7 col-md-offset-2">
+                    <div class="float-element" ng-repeat="p in session.participants">{{p}}<i class=" glyphicon glyphicon-remove" ng-click="removeElement($index)"></i></div>
+                    <span ng-show="session.participants.length==0">Vous devez ajouter des participants avant de continuer...</span>
+                </div>
+            </fieldset>
+            <div class="col-md-1 col-md-offset-7 ">
+                <button ng-click="createSession()">Valider</button>
+            </div>
+        </form>
+    </div>
+        </div>
+</div>
+	
+	

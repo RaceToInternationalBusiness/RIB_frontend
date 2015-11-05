@@ -3,92 +3,96 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
-}
-
 body {
-  padding: 0;
-  background-color:#34495e;
-}
-
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-/* Custom page header */
-.header {
-  /* Make the masthead heading the same height as the navigation */
-  h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
-  }
-}
-
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-}
-
-.container-narrow > hr {
-  margin: 30px 0;
-}
-
-/* Main marketing message and sign up button */
-.jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-
-  .btn {
-    font-size: 21px;
-    padding: 14px 24px;
-  }
-}
-
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-
-  p + h4 {
-    margin-top: 28px;
-  }
-}
-
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
-
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 0px;
-  }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
+    padding: 0;
+    background-color:#34495e;
+    font-family: "Roboto",Helvetica;
+    padding-bottom: 20px;
 }
 
 .navbar{
-	margin-bottom:0em;
+	margin-bottom:0px;
+    background-color:#3498db;
+    border-radius: none !important;
+    border:none;
+    width: 100%;
+}
+
+.navbar a, .navbar-brand a
+{
+    color:white !important;
+        font-size: 25px;
+    font-weight: bold;
+}
+
+.navbar-brand img
+{
+    margin-top: -5px;
+    height: 35px;
+}
+
+button
+{
+    min-height: 35px;
+    min-width: 120px;
+    border: none;
+    border-radius:none;
+    color:white;
+    background: #3498db;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 35px;
+}
+
+.btn-action
+{
+    background: #40d47e;
+}
+
+.control-label
+{
+    text-align: right;
+    height: 34px;
+    line-height: 34px;
+}
+
+.float-element
+{
+    float: left;
+    min-height: 34px;
+    line-height: 34px;
+    min-width: 120px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background: white;
+    color:grey;
+}
+
+.float-element i
+{
+    float: right;
+    line-height: 34px;
+    margin-right: 5px;
+}
+.float-element i:hover
+{
+    cursor:pointer;
+}
+
+textarea
+{
+    min-height: 100px;
+    border-radius:none !important;
+    resize: none;
+    background: white;
+    border:none;
+}
+
+.form-control 
+{
+    background: white;
+    border: none;
+    border-radius:0px;
 }
 
 h2{
@@ -98,6 +102,7 @@ h2{
 	padding-top:0.416em;
 	padding-bottom:0.416em;
 	font-size: 24px;	
+    text-align: center;
 }
 
 h3{
@@ -109,14 +114,26 @@ h3{
 	font-size: 18px;
 }
 
-.informations{
-	background-color:#ecf0f1;
-	margin-top:0em;
+.page
+{
+    background-color:#ecf0f1;
+    padding-bottom: 1.428em;
 }
 
-.work{
-	background-color:#ecf0f1;
+.no-title{
 	margin-top:1.428em;
+}
+
+.page span
+{
+    height: 34px;
+    line-height: 34px;
+    margin-left: 10px;
+}
+
+.page input[type="checkbox"]
+{
+    margin: 5px;
 }
 
 .user-icon{
