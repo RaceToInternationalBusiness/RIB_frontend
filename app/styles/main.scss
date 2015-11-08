@@ -136,6 +136,18 @@ textarea
     background: white;
     border: none;
     border-radius:0px;
+    box-shadow: none;
+}
+
+.input-group-addon
+{
+    height: 33px !important;
+    padding: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+    border:none;
+    background: white;
+    border-radius: 0;
 }
 
 header
@@ -221,6 +233,39 @@ h4
 .page input[type="checkbox"]
 {
     margin: 5px;
+}
+
+.list-container
+{
+    max-height: 200px;
+    overflow-y: scroll;
+    padding: 0;
+    border:1px solid #d6d6d6
+}
+
+.list-container ul
+{
+    list-style-type: none;
+    background: white;
+    padding: 0;
+    ;
+}
+
+.list-container ul li
+{
+    margin: 0;
+    padding: 10px;
+    border-bottom:1px solid #d6d6d6;
+}
+
+.list-container ul li:last-child
+{
+    border:none;
+}
+
+.list-container ul .selected
+{
+    background: #ecf0f1;
 }
 
 .user-icon{

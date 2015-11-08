@@ -35,7 +35,8 @@
 
             <ul class="nav navbar-nav">
               <li><a ng-href="#/client/dashboard" class="active">dashboard</a></li>
-              <li><a ng-href="#/client/signup" class="active">signup</a></li>
+              <li><a ng-href="#/client/signup" >signup</a></li>
+              <li><a ng-href="#/client/signup/team" >team</a></li>
               <li><a ng-href="#/admin/create-session">Create Session</a></li>
             </ul>
           </div>
@@ -71,11 +72,14 @@
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
+      
+        <script src="scripts/filters/contains-filter.js"></script>
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/homeCtrl.js"></script>
         <script src="scripts/controllers/client/dashboardCtrl.js"></script>
         <script src="scripts/controllers/client/signupCtrl.js"></script>
+        <script src="scripts/controllers/client/teamChoiceCtrl.js"></script>
         <script src="scripts/controllers/admin/createSessionCtrl.js"></script>
         <!-- endbuild -->
 </body>

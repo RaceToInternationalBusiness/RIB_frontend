@@ -34,6 +34,11 @@ angular
         controller: 'SignupCtrl',
         controllerAs: 'signup'
       })
+        .when('/client/signup/team', {
+        templateUrl: 'views/client/team-choice.html',
+        controller: 'TeamChoiceCtrl',
+        controllerAs: 'teamChoice'
+      })
       .when('/admin/create-session', {
         templateUrl: 'views/admin/create-session.html',
         controller: 'CreateSessionCtrl'
