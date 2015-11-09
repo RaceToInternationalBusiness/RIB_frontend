@@ -39,6 +39,11 @@ angular
         controller: 'TeamChoiceCtrl',
         controllerAs: 'teamChoice'
       })
+      .when('/client/decision', {
+        templateUrl: 'views/client/decision.html',
+        controller: 'DecisionCtrl',
+        controllerAs: 'decision'
+      })
       .when('/admin/create-session', {
         templateUrl: 'views/admin/create-session.html',
         controller: 'CreateSessionCtrl'

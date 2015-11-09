@@ -235,12 +235,37 @@ h4
     margin: 5px;
 }
 
+.full-list-container
+{
+    padding: 0;
+}
+
+.full-list-container ul
+{
+    list-style-type: none;
+    background: white;
+    padding: 0;
+    
+}
+
+.full-list-container ul .selected
+{
+    background: #ecf0f1;
+}
+
+.full-list-container ul li
+{
+    margin: 0;
+    padding: 10px;
+    border:1px solid #d6d6d6;
+}
+
 .list-container
 {
     max-height: 200px;
     overflow-y: scroll;
     padding: 0;
-    border:1px solid #d6d6d6
+    border:1px solid #d6d6d6;
 }
 
 .list-container ul
@@ -248,7 +273,6 @@ h4
     list-style-type: none;
     background: white;
     padding: 0;
-    ;
 }
 
 .list-container ul li
