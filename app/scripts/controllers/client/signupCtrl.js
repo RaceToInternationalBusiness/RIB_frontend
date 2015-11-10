@@ -9,9 +9,10 @@
  */
 angular.module('ribFrontendApp')
   .controller('SignupCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+
+    
+    this.inscription = function(){
+    	
+    	
+    }
   });

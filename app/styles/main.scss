@@ -200,10 +200,7 @@ h4
 	padding-top:0.55em;
 	padding-bottom:0.55em;
 	font-size: 18px;
-	text-align: center;
-    
-    
-    
+	text-align: center;   
 }
 
 .page
@@ -302,25 +299,19 @@ h4
 	width:10%;
 }
 
-.machine-icon{
-}
-
-.askquestion-icon{
-}
-
 .user-name{
 	color:#8b51f5;
 	margin-top:0em;	
 	margin-bottom:1.6em;
 }
 
-p{
+p, label{
 	font-size: 18px;
 	font-family:Roboto;
 }
 
 span{
-	font-family: Helvetica; 
+	font-family: Roboto; 
 	font-size: 14px;
 	margin-top:50px;
 }
@@ -347,7 +338,7 @@ span{
 
 .access-button{
 	font-size: 24px;
-	font-family: Helvetica;
+	font-family: Roboto;
 	width:6.4583em;
 	height:2em;
 	background-color:#e74c3c;
@@ -360,8 +351,16 @@ span{
 	transform: translateY(-50%);
  }
  
-.form-center{
-	display:inline-block;
+.form-inscription{
+	margin-top: 6em;	
+}
+
+.form-inscription input{
+	width:400px;
+}
+
+.form-inscription table{
+	margin:auto;
 }
  
 .text_ita{

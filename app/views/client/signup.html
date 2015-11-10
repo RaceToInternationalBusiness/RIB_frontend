@@ -14,26 +14,59 @@
 	<div class="row">
 		<div class="col-md-12">
 			<header>Inscription</header>
-			<div class="page">
+			<div class="page text-center">
 				<img class="info-icon pull-left" src="images/info.png"/> 
-				<p>Vous avez été invité à la session<br> MarkChamp ALMA2015 <br>Merci de remplir les champs ci-dessous<br> pour accéder aux équipes</p>		
+				<p >
+					Vous avez été invité à la session<br>
+					MarkChamp ALMA2015 <br>
+					Merci de remplir les champs ci-dessous<br>
+					pour accéder aux équipes
+				</p>		
 			
 						
-				<form role="form">
-					<table class="form-center">
+				<form class="form-inscription"  role="form">
+					<table >
 						<tr>
 							<th>
-								<label for="email">Email:</label>
+								<label for="email">Email : </label>
 							</th>
 							<th>		
-						    	<input type="email" id="email" placeholder="Enter email">
+						    	<input type="email" id="email" placeholder="JohnDoe@gmail.com">
+							</th>
+						</tr>
+						<tr>
+							<th>
+								<label for="prenom">Prénom : </label>
+							</th>
+							<th>		
+						    	<input id="prenom" placeholder="John">
+							</th>
+						</tr>
+						<tr>
+							<th>
+								<label for="nom">Nom : </label>
+							</th>
+							<th>		
+						    	<input id="nom" placeholder="Doe">
+							</th>
+						</tr>
+						<tr>
+							<th>
+								<label for="etablissement">Etablissement : </label>
+							</th>
+							<th>		
+						    	<input id="etablissement" placeholder="Université de Nantes">
+							</th>
+						</tr>
+						<tr>
+							<th></th>
+							<th>    
+								<button ng-click="signup.inscription()" class="btn-action pull-right">Valider</button>				
 							</th>
 						</tr>
 					</table>
-				
 				</form>
 			</div> 
-
 		</div>
 	</div>
 </div>
