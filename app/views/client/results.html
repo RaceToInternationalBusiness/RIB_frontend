@@ -31,10 +31,14 @@
 <div class="col-md-9" >
 	<header>Résultats (Année {{results.yearNumber}})</header>
 	<div class="row page">
-		<div class="col-md-6 sub-page">
-			<header>Capacité de production</header>
-			<div class="sub-page text-center">
-				<p class="white">{{results.productionCapacity}}</p>
+		<div class="col-md-6 page-part">
+			<div class="page text-center">
+				<header>Capacité de production</header>
+				<div class="col-md-12 sub-page">
+						<div class="row ">
+							<p class="white">{{results.productionCapacity}}</p>
+						</div>
+					</div>
 			</div>
 			
 			<div class="page text-center">
@@ -80,10 +84,15 @@
 			</div>
 		</div>
 		
-		<div class="col-md-6 sub-page">
-			<header>Parts de marché (Volume)</header>
-			<div class="sub-page text-center">
-				<p class="white">{{results.marketShare}}%</p>
+		<div class="col-md-6 page-part">
+		
+			<div class="page text-center">
+				<header>Parts de marché (Volume)</header>
+				<div class="col-md-12 sub-page">
+					<div class="row">
+						<p class="white">{{results.marketShare}}%</p>
+					</div>
+				</div>
 			</div>
 			
 			<div class="page text-center">
@@ -139,10 +148,9 @@
 			</div>
 		</div>
 		
-		
 		<div class="col-md-3 ">
 		</div>
-		<div class="col-md-6 sub-page">
+		<div class="col-md-6 page-part">
 			<div class="page text-center">
 				<header>Résultats</header>
 				<div class="col-md-6 sub-page">
