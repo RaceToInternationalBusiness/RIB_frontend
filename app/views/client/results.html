@@ -2,19 +2,167 @@
 	<div class="row">
 		<div class="col-md-12">
 			<header>Produits</header>
+			<div class="page no-padding">
+				<div class="btn-group btn-group-vertical btn-block">
+					<button type="button" class="btn btn-default button-group-not-selected">Non marqué</button>
+					<button type="button" class="btn btn-default button-group-not-selected">Milieu de gamme</button>
+					<button type="button" class="btn btn-default button-group-not-selected">Haut de gamme</button>
+				</div>
+			</div>
+			
+			<header>Overview</header>
 			<div class="page">
-				
+				<img class="user-icon" src="images/account_circle.png"/> 
+				<p class="user-name">{{results.userName}}</p>
+				<p class="no-margin">CA actuel : {{results.ca}}€</p>
+				<p class="no-margin">Bénéfice : {{results.profit}}€</p>
+				<h3>Reminder</h3>
+				<p>Année N°{{results.yearNumber}}</p>
+				<p  class="session-end">
+					<span>Fin de session dans : </span>
+					<br>
+					<span class="time-left no-margin">{{results.getRemainTime()}}</span>
+				</p>
 			</div> 
 		</div>
 	</div>
 </div>
 
 <div class="col-md-9" >
-	<div class="row">
-		<header>Résultats (Année {{results.year}})</header>
-	
-		<div class="col-md-12 page">
+	<header>Résultats (Année {{results.yearNumber}})</header>
+	<div class="row page">
+		<div class="col-md-6 sub-page">
+			<header>Capacité de production</header>
+			<div class="sub-page text-center">
+				<p class="white">{{results.productionCapacity}}</p>
+			</div>
+			
+			<div class="page text-center">
+				<header>Stocks</header>
+				<div class="col-md-6 sub-page">
+					<div class="row green-odd-title">
+						<p> Quantité </p>
+					</div>
+					<div class="row white">
+						<p> {{results.stocks.quantity}} </p>
+					</div>
+				</div>
 				
+				<div class="col-md-6 sub-page">
+					<div class="row row green-even-title">
+						<p> Valeur </p>
+					</div>
+					<div class="row white">
+						<p> {{results.stocks.value}} </p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="page text-center">
+				<header>Chiffre d'Affaires</header>
+				<div class="col-md-6 sub-page">
+					<div class="row green-odd-title">
+						<p> HT (&pound;) </p>
+					</div>
+					<div class="row white">
+						<p> {{results.taxe.ht}} </p>
+					</div>
+				</div>
+				
+				<div class="col-md-6 sub-page">
+					<div class="row row green-even-title">
+						<p> HTVA (€) </p>
+					</div>
+					<div class="row white">
+						<p> {{results.taxe.htva}} </p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="col-md-6 sub-page">
+			<header>Parts de marché (Volume)</header>
+			<div class="sub-page text-center">
+				<p class="white">{{results.marketShare}}%</p>
+			</div>
+			
+			<div class="page text-center">
+				<header>Ventes</header>
+				<div class="col-md-4 sub-page">
+					<div class="row green-odd-title">
+						<p> Proposition </p>
+					</div>
+					<div class="row white">
+						<p> {{results.sales.proposition}} </p>
+					</div>
+				</div>
+				
+				<div class="col-md-4 sub-page">
+					<div class="row row green-even-title">
+						<p> Potentiel </p>
+					</div>
+					<div class="row white">
+						<p> {{results.sales.potential}} </p>
+					</div>
+				</div>
+				
+				<div class="col-md-4 sub-page">
+					<div class="row row green-odd-title">
+						<p> Réelles </p>
+					</div>
+					<div class="row white">
+						<p> {{results.sales.real = 1000}} </p>
+					</div>
+				</div>
+			
+			</div>
+			
+			<div class="page text-center">
+				<header>Prix de vente</header>
+				<div class="col-md-6 sub-page">
+					<div class="row green-odd-title">
+						<p> TTC (&pound;)</p>
+					</div>
+					<div class="row white">
+						<p> {{results.salePrice.ttc}} </p>
+					</div>
+				</div>
+				
+				<div class="col-md-6 sub-page">
+					<div class="row row green-even-title">
+						<p> HT (€) </p>
+					</div>
+					<div class="row white">
+						<p> {{results.salePrice.ht}} </p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="col-md-3 ">
+		</div>
+		<div class="col-md-6 sub-page">
+			<div class="page text-center">
+				<header>Résultats</header>
+				<div class="col-md-6 sub-page">
+					<div class="row blue-odd-title">
+						<p> Commercial </p>
+					</div>
+					<div class="row white">
+						<p> {{results.results.commercial}} </p>
+					</div>
+				</div>
+				
+				<div class="col-md-6 sub-page">
+					<div class="row row blue-even-title">
+						<p> Exercie </p>
+					</div>
+					<div class="row white">
+						<p> {{results.results.exercise}} </p>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>

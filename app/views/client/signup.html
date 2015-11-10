@@ -21,52 +21,46 @@
 					MarkChamp ALMA2015 <br>
 					Merci de remplir les champs ci-dessous<br>
 					pour accéder aux équipes
-				</p>		
+				</p>
+				
+				<div class="row">
+					<div class="col-md-2">
+					</div>
 			
-						
-				<form class="form-inscription"  role="form">
-					<table >
-						<tr>
-							<th>
-								<label for="email">Email : </label>
-							</th>
-							<th>		
-						    	<input type="email" id="email" placeholder="JohnDoe@gmail.com">
-							</th>
-						</tr>
-						<tr>
-							<th>
-								<label for="prenom">Prénom : </label>
-							</th>
-							<th>		
-						    	<input id="prenom" placeholder="John">
-							</th>
-						</tr>
-						<tr>
-							<th>
-								<label for="nom">Nom : </label>
-							</th>
-							<th>		
-						    	<input id="nom" placeholder="Doe">
-							</th>
-						</tr>
-						<tr>
-							<th>
-								<label for="etablissement">Etablissement : </label>
-							</th>
-							<th>		
-						    	<input id="etablissement" placeholder="Université de Nantes">
-							</th>
-						</tr>
-						<tr>
-							<th></th>
-							<th>    
-								<button ng-click="signup.inscription()" class="btn-action pull-right">Valider</button>				
-							</th>
-						</tr>
-					</table>
-				</form>
-			</div> 
+					<div class="col-md-6">
+						<form class="form-horizontal inscription" role="form">
+				  			<div class="form-group">
+				  				<label class="col-lg-3 control-label" for="email">Email : </label>
+				    			<div class="col-lg-9">
+				    				<input class="form-control" type="email" id="email" placeholder="JohnDoe@gmail.com">
+				    			</div>
+				  			</div>
+				  
+				  			<div class="form-group">
+				  				<label class="col-lg-3 control-label" for="prenom">Prénom : </label>
+						    	<div class="col-lg-9">
+						      		<input class="form-control" id="prenom" placeholder="John">
+						    	</div>
+				  			</div>
+				  			
+				  			<div class="form-group">
+				  				<label class="col-lg-3 control-label" for="nom">Nom : </label>
+						    	<div class="col-lg-9">
+						    		<input class="form-control" id="nom" placeholder="Doe">
+						    	</div>
+				  			</div>
+				  			
+				  			<div class="form-group">
+								<label class="col-lg-3 control-label" for="etablissement">Etablissement : </label>
+				  			   	<div class="col-lg-9">
+				  			   		<input class="form-control" id="etablissement" placeholder="Université de Nantes">
+						    	</div>
+				  			</div>
+						</form>
+						<button ng-click="signup.inscription()" class="btn-action pull-right">Valider</button>	
+					</div>
+				</div>
+			</div>		
 		</div>
 	</div>
 </div>

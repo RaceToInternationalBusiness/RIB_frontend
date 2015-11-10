@@ -14,7 +14,6 @@ angular.module('ribFrontendApp')
     this.ca = 200000;
     this.profit = -30000;
     this.yearNumber = 4;
-    this.year = 3;
     this.numberOfMachines = 4;
     
     this.getRemainTime = function(){

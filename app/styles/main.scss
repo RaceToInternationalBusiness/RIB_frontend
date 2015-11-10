@@ -212,13 +212,19 @@ h4
     margin-bottom: 20px;
 }
 
+.sub-page{
+	background-color:#ecf0f1;
+    padding-top:0px;
+    padding-bottom: 30px;
+    margin: 0;
+    margin-bottom: 0px;
+}
+
 .page img
 {
     margin: 5px;
     max-width: 30%;
 }
-
-
 
 .page span
 {
@@ -305,7 +311,7 @@ h4
 	margin-bottom:1.6em;
 }
 
-p, label{
+p{
 	font-size: 18px;
 	font-family:Roboto;
 }
@@ -329,6 +335,11 @@ span{
 .no-margin{
 	margin-bottom:0em;
 	margin-top:0em;	
+}
+
+.no-padding{
+	padding-bottom:0em;
+	padding-top:0em;	
 }
 
 .session-end{
@@ -370,3 +381,36 @@ span{
  	padding-left:0.0em;
  }
  
+.button-group-not-selected{
+ 	background-color:#ffffff;
+ 	font-size: 18px;
+ }
+ 
+.button-group-selected{
+	background-color:#e6e6e6;
+	font-size: 18px;
+ }
+ 
+ .green-odd-title{
+ 	background-color:#2ecc71; 
+ }
+ 
+ .green-even-title{
+ 	background-color:#2cc36b;
+ }
+ 
+  .blue-odd-title{
+ 	background-color:#3498db; 
+ }
+ 
+ .blue-even-title{
+ 	background-color:#2980b9;
+ }
+ 
+ .white{
+ 	background-color:#ffffff;
+ }
+ 
+.inscription{
+	padding-top:50px;
+}
