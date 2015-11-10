@@ -44,6 +44,11 @@ angular
         controller: 'DecisionCtrl',
         controllerAs: 'decision'
       })
+      .when('/client/results', {
+        templateUrl: 'views/client/results.html',
+        controller: 'ResultsCtrl',
+        controllerAs: 'results'
+      })
       .when('/admin/create-session', {
         templateUrl: 'views/admin/create-session.html',
         controller: 'CreateSessionCtrl'
