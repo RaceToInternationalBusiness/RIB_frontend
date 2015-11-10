@@ -232,29 +232,30 @@ h4
     margin: 5px;
 }
 
-.full-list-container
-{
-    padding: 0;
-}
 
-.full-list-container ul
+.panel
 {
     list-style-type: none;
     background: white;
     padding: 0;
-    
+    box-shadow: none;
+    border: none;
+    padding: 0;
+    border-radius: 0;
 }
 
-.full-list-container ul .selected
+.panel .selected
 {
     background: #ecf0f1;
 }
 
-.full-list-container ul li
+.panel-heading
 {
     margin: 0;
     padding: 10px;
     border:1px solid #d6d6d6;
+    box-shadow: none;
+    border-radius: 0px;
 }
 
 .list-container
