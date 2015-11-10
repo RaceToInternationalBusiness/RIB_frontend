@@ -17,7 +17,11 @@ describe('Controller: DashboardCtrl', function () {
     });
   }));
 
-  it('should attach a list of awesomeThings to the scope', function () {
-    expect(DashboardcontrollerCtrl.awesomeThings.length).toBe(3);
+  it('should define some basic value', function () {
+//    expect(DashboardcontrollerCtrl.username).toBeDefined();
+//    expect(DashboardcontrollerCtrl.ca).toBeDefined();
+//    expect(DashboardcontrollerCtrl.profit).toBeDefined();
+//    expect(DashboardcontrollerCtrl.yearNumber).toBeDefined();
+//    expect(DashboardcontrollerCtrl.numberOfMachines).toBeDefined();
   });
 });

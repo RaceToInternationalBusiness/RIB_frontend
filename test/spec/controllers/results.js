@@ -17,7 +17,11 @@ describe('Controller: ResultsCtrl', function () {
     });
   }));
 
-  it('should attach a list of awesomeThings to the scope', function () {
-    expect(ResultsCtrl.awesomeThings.length).toBe(3);
+  it('should define some basic value', function () {
+//    expect(ResultsCtrl.username).toBeDefined();
+//    expect(ResultsCtrl.ca).toBeDefined();
+//    expect(ResultsCtrl.profit).toBeDefined();
+//    expect(ResultsCtrl.yearNumber).toBeDefined();
+//    expect(ResultsCtrl.numberOfMachines).toBeDefined();
   });
 });

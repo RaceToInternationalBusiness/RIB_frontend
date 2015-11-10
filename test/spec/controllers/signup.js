@@ -16,8 +16,4 @@ describe('Controller: SignupCtrl', function () {
       // place here mocked dependencies
     });
   }));
-
-  it('should attach a list of awesomeThings to the scope', function () {
-    expect(SignupCtrl.awesomeThings.length).toBe(3);
-  });
 });
