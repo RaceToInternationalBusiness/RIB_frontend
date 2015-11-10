@@ -1,11 +1,13 @@
 {
   "name": "ribfrontend",
   "private": true,
-  "devDependencies": {
+  "dependencies": {
     "autoprefixer-core": "^5.2.1",
     "bower": "^1.6.5",
+    "express": "^4.13.3",
     "grunt": "^0.4.5",
     "grunt-angular-templates": "^0.5.7",
+    "grunt-cli": "^0.1.13",
     "grunt-concurrent": "^1.0.0",
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-compass": "^1.0.0",
@@ -42,9 +44,8 @@
   },
   "scripts": {
     "preinstall": "env gem install compass",
-    "postinstall": "bower install",
-    "start": "grunt serve",
+    "postinstall": "bower install && grunt build",
+    "start": "node web.js",
     "test": "grunt test"
   }
 }
-
