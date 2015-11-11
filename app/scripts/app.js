@@ -49,6 +49,11 @@ angular
         controller: 'ResultsCtrl',
         controllerAs: 'results'
       })
+      .when('/client/market', {
+        templateUrl: 'views/client/market.html',
+        controller: 'MarketCtrl',
+        controllerAs: 'market'
+      })
       .when('/admin/create-session', {
         templateUrl: 'views/admin/create-session.html',
         controller: 'CreateSessionCtrl'
