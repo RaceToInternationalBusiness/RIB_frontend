@@ -10,149 +10,76 @@
 </div>
 
 <div class="col-md-9" >
-	<header>Résultats (Année {{results.yearNumber}})</header>
+	<header>Marché</header>
 	<div class="row page">
-		<div class="col-md-6 page-part">
-			<div class="page text-center">
-				<header>Capacité de production</header>
-				<div class="col-md-12 sub-page">
-						<div class="row ">
-							<p class="white">{{results.productionCapacity}}</p>
-						</div>
-					</div>
-			</div>
-			
+		<div class="col-md-3 ">
+		</div>
+		<div class="col-md-6 page-part text-center">
 			<div class="page text-center">
 				<header>Stocks</header>
-				<div class="col-md-6 sub-page">
-					<div class="row green-odd-title">
-						<p> Quantité </p>
-					</div>
-					<div class="row white">
-						<p> {{results.stocks.quantity}} </p>
-					</div>
-				</div>
-				
-				<div class="col-md-6 sub-page">
-					<div class="row row green-even-title">
-						<p> Valeur </p>
-					</div>
-					<div class="row white">
-						<p> {{results.stocks.value}} </p>
-					</div>
-				</div>
-			</div>
-			
-			<div class="page text-center">
-				<header>Chiffre d'Affaires</header>
-				<div class="col-md-6 sub-page">
-					<div class="row green-odd-title">
-						<p> HT (&pound;) </p>
-					</div>
-					<div class="row white">
-						<p> {{results.taxe.ht}} </p>
-					</div>
-				</div>
-				
-				<div class="col-md-6 sub-page">
-					<div class="row row green-even-title">
-						<p> HTVA (€) </p>
-					</div>
-					<div class="row white">
-						<p> {{results.taxe.htva}} </p>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		<div class="col-md-6 page-part">
-		
-			<div class="page text-center">
-				<header>Parts de marché (Volume)</header>
-				<div class="col-md-12 sub-page">
-					<div class="row">
-						<p class="white">{{results.marketShare}}%</p>
-					</div>
-				</div>
-			</div>
-			
-			<div class="page text-center">
-				<header>Ventes</header>
 				<div class="col-md-4 sub-page">
 					<div class="row green-odd-title">
-						<p> Proposition </p>
+						<p> Sans marque </p>
 					</div>
 					<div class="row white">
-						<p> {{results.sales.proposition}} </p>
+						<p> {{market.stock.withoutBrand }} </p>
 					</div>
 				</div>
 				
 				<div class="col-md-4 sub-page">
 					<div class="row row green-even-title">
-						<p> Potentiel </p>
+						<p> Moyenne gamme </p>
 					</div>
 					<div class="row white">
-						<p> {{results.sales.potential}} </p>
+						<p> {{market.stock.middleOfTheRange}} </p>
 					</div>
 				</div>
 				
 				<div class="col-md-4 sub-page">
 					<div class="row row green-odd-title">
-						<p> Réelles </p>
+						<p> Haute gamme </p>
 					</div>
 					<div class="row white">
-						<p> {{results.sales.real = 1000}} </p>
+						<p> {{market.stock.topOfTheRange}} </p>
 					</div>
 				</div>
-			
 			</div>
-			
+		</div>
+	
+		<div class="col-md-6 page-part"  ng-repeat="team in market.teams | orderBy:'teamName'">
 			<div class="page text-center">
-				<header>Prix de vente</header>
-				<div class="col-md-6 sub-page">
-					<div class="row green-odd-title">
-						<p> TTC (&pound;)</p>
+				<header>{{team.teamName}}</header>
+				
+				<div class="col-md-4 sub-page">
+					<div class="row yellow-odd-title">
+						<p> S.marque </p>
 					</div>
 					<div class="row white">
-						<p> {{results.salePrice.ttc}} </p>
+						<p> {{team.withoutBrand}} € </p>
 					</div>
 				</div>
 				
-				<div class="col-md-6 sub-page">
-					<div class="row row green-even-title">
-						<p> HT (€) </p>
+				<div class="col-md-4 sub-page">
+					<div class="row yellow-even-title">
+						<p> M.gamme </p>
 					</div>
 					<div class="row white">
-						<p> {{results.salePrice.ht}} </p>
+						<p> {{team.middleOfTheRange}} € </p>
+					</div>
+				</div>
+				
+				<div class="col-md-4 sub-page">
+					<div class="row yellow-odd-title">
+						<p> H.gamme </p>
+					</div>
+					<div class="row white">
+						<p> {{team.topOfTheRange}} € </p>
 					</div>
 				</div>
 			</div>
+
 		</div>
 		
-		<div class="col-md-3 ">
-		</div>
-		<div class="col-md-6 page-part">
-			<div class="page text-center">
-				<header>Résultats</header>
-				<div class="col-md-6 sub-page">
-					<div class="row blue-odd-title">
-						<p> Commercial </p>
-					</div>
-					<div class="row white">
-						<p> {{results.results.commercial}} </p>
-					</div>
-				</div>
-				
-				<div class="col-md-6 sub-page">
-					<div class="row row blue-even-title">
-						<p> Exercie </p>
-					</div>
-					<div class="row white">
-						<p> {{results.results.exercise}} </p>
-					</div>
-				</div>
-			</div>
-		</div>
 	</div>
 </div>
 	

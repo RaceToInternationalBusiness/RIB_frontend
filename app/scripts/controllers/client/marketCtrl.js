@@ -9,9 +9,31 @@
  */
 angular.module('ribFrontendApp')
   .controller('MarketCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+    
+	  this.stock = {};
+	  
+	  this.stock.withoutBrand = 3000;
+	  this.stock.middleOfTheRange = 2000;
+	  this.stock.topOfTheRange = 1500;
+	  
+	  this.teams = 
+			  [{
+				  teamName: "Elronde",
+				  withoutBrand: 5,
+				  middleOfTheRange: 15,
+				  topOfTheRange: 50
+			  },
+			  {
+				  teamName: "Valhalla",
+				  withoutBrand: 5,
+				  middleOfTheRange: 15,
+				  topOfTheRange: 50
+			  },
+			  {
+				  teamName: "Ares",
+				  withoutBrand: 5,
+				  middleOfTheRange: 15,
+				  topOfTheRange: 50
+			  }];
+
   });
