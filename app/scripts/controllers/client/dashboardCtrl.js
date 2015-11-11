@@ -7,24 +7,21 @@
  * # DashboardcontrollerCtrl
  * Controller of the ribFrontendApp
  */
-angular.module('ribFrontendApp')
-  .controller('DashboardCtrl', function () {
+angular.module('ribFrontendApp').controller('DashboardCtrl', function (teamProfile) {
 
-    this.userName = "Coucou c'est moi !";
-    this.ca = 200000;
-    this.profit = -30000;
-    this.yearNumber = 4;
-    this.numberOfMachines = 4;
+	this.teamProfile = teamProfile;
+	  
+	this.numberOfMachines = 4;
 
-    this.getRemainTime = function(){
-    	return "6 Heures 38 Minutes";
-    };
-
-    this.buyMachine = function(){
-
-    };
-
-    this.askQuetion = function(){
-
-    }
-  });
+	this.getRemainTime = function(){
+		return "6 Heures 38 Minutes";
+	};
+	
+	this.buyMachine = function(){
+	
+	};
+	
+	this.askQuetion = function(){
+	
+	}
+});

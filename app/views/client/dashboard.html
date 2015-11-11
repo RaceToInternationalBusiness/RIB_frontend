@@ -4,11 +4,11 @@
 			<header>Overview</header>
 			<div class="page">
 				<img class="user-icon" src="images/account_circle.png"/> 
-				<p class="user-name">{{dashboard.userName}}</p>
-				<p class="no-margin">CA actuel : {{dashboard.ca}}€</p>
-				<p class="no-margin">Bénéfice : {{dashboard.profit}}€</p>
+				<p class="user-name">{{dashboard.teamProfile.teamName}}</p>
+				<p class="no-margin">CA actuel : {{dashboard.teamProfile.ca}}€</p>
+				<p class="no-margin">Bénéfice : {{dashboard.teamProfile.profit}}€</p>
 				<h3>Reminder</h3>
-				<p>Année N°{{dashboard.yearNumber}}</p>
+				<p>Année N°{{dashboard.teamProfile.yearNumber}}</p>
 				<p  class="session-end">
 					<span>Fin de session dans : </span>
 					<br>

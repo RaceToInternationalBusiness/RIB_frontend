@@ -44,6 +44,11 @@ angular
         controller: 'DecisionCtrl',
         controllerAs: 'decision'
       })
+      .when('/client/messages', {
+        templateUrl: 'views/client/messages.html',
+        controller: 'MessagesCtrl',
+        controllerAs: 'messages'
+      })
       .when('/client/results', {
         templateUrl: 'views/client/results.html',
         controller: 'ResultsCtrl',
@@ -62,3 +67,14 @@ angular
         redirectTo: '/'
       });
   });
+
+angular.module('ribFrontendApp').provider("teamProfile", function(){
+	this.$get = function(){
+		return{
+			"teamName" : "Shark team",
+			"ca" : 200000,
+			"profit" : -30000,
+			"yearNumber" : 3
+		}		
+	}
+});
