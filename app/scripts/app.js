@@ -63,6 +63,10 @@ angular
         templateUrl: 'views/admin/create-session.html',
         controller: 'CreateSessionCtrl'
       })
+     .when('/admin/create-product', {
+        templateUrl: 'views/admin/create-product.html',
+        controller: 'CreateProductCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
