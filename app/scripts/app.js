@@ -68,13 +68,13 @@ angular
       });
   });
 
-angular.module('ribFrontendApp').provider("teamProfile", function(){
+angular.module('ribFrontendApp').provider('teamProfile', function(){
 	this.$get = function(){
 		return{
-			"teamName" : "Shark team",
-			"ca" : 200000,
-			"profit" : -30000,
-			"yearNumber" : 3
-		}		
-	}
+			teamName : 'Shark team',
+			ca : 200000,
+			profit : -30000,
+			yearNumber : 3
+		};		
+	};
 });
