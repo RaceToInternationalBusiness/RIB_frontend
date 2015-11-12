@@ -6,7 +6,7 @@
                 <fieldset class="form-group">
                     <p>Identifiant:</p>
                     <div class="col-md-12">
-                        <input type="text" class="form-control input-md" placeholder="Identifiant" ng-model="login" />
+                        <input type="text" class="form-control input-md" placeholder="Identifiant" ng-model="username" />
                     </div>
                 </fieldset>
                 <fieldset class="form-group">
@@ -15,7 +15,7 @@
                         <input type="password" class="form-control input-md" placeholder="Mot de passe" ng-model="password" />
                     </div>
                 </fieldset>
-                <button>Se connecter</button>
+                <button ng-click="login()">Se connecter</button>
                 <h4><i class="glyphicon glyphicon-info-sign"></i></h4>
                 <p class="info-text">
                     Vous ne connaissez pas vos identifiants?
