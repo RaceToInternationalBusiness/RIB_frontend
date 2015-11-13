@@ -428,5 +428,43 @@ span{
  }
  
 .inscription{
-	padding-top:50px;
+	padding-top:10px;
+}
+
+.message-scroll{
+	height: 700px;
+	width:100%;
+	overflow: scroll;
+}
+
+.admin{
+	background-color:#ffffff;
+	width:100%;
+	display: inline-block;
+	font-size: 24px;
+}
+
+.team{
+	background-color:#a8c6fa;
+	display: inline-block;
+	width:100%;
+	font-size: 24px;
+}
+
+.col-md-1 img
+{
+    max-width: 40%;
+}
+
+.adjust-message{
+	padding-left:0px;
+	padding-right:0px;
+}
+
+#question
+{
+    margin-left: 20px;
+    margin-bottom: 0px;
+    font-size: 24px;
+    background-color:#ffffff;
 }
