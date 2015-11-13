@@ -43,9 +43,9 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "preinstall": "env gem install compass",
     "postinstall": "bower install && grunt build",
     "start": "node web.js",
     "test": "grunt test"
   }
 }
+

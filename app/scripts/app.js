@@ -63,18 +63,22 @@ angular
         templateUrl: 'views/admin/create-session.html',
         controller: 'CreateSessionCtrl'
       })
+     .when('/admin/create-product', {
+        templateUrl: 'views/admin/create-product.html',
+        controller: 'CreateProductCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
   });
 
-angular.module('ribFrontendApp').provider("teamProfile", function(){
+angular.module('ribFrontendApp').provider('teamProfile', function(){
 	this.$get = function(){
 		return{
-			"teamName" : "Shark team",
-			"ca" : 200000,
-			"profit" : -30000,
-			"yearNumber" : 3
-		}		
-	}
+			teamName : 'Shark team',
+			ca : 200000,
+			profit : -30000,
+			yearNumber : 3
+		};		
+	};
 });
