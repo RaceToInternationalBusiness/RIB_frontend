@@ -59,11 +59,6 @@ angular
         controller: 'MarketCtrl',
         controllerAs: 'market'
       })
-      .when('/client/team-choice', {
-        templateUrl: 'views/client/teamChoice.html',
-        controller: 'TeamchoiceCtrl',
-        controllerAs: 'teamChoice'
-      })
       .when('/admin/create-session', {
         templateUrl: 'views/admin/create-session.html',
         controller: 'CreateSessionCtrl'

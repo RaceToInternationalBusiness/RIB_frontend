@@ -1,8 +1,9 @@
-angular.module('ribFrontendApp').service('userService', ['$window', '$rootScope', '$route', '$location', "$timeout", function ($window, $rootScope, $route, $location, $timeout) {
+'use strict';
+
+angular.module('ribFrontendApp').service('userService', ['$window', '$rootScope', function ($window, $rootScope) {
     
     this.getUser = function () {
         if ($window.localStorage.user && $window.localStorage.user !== null) {
-            var user = null;
             try {
                 return JSON.parse($window.localStorage.user);
             } catch (e) {
