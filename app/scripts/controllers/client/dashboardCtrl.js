@@ -14,7 +14,7 @@ angular.module('ribFrontendApp').controller('DashboardCtrl', function (teamProfi
 	this.numberOfMachines = 4;
 
 	this.getRemainTime = function(){
-		return "6 Heures 38 Minutes";
+		teamProfile
 	};
 	
 	this.buyMachine = function(){
