@@ -8,11 +8,12 @@
  * Controller of the ribFrontendApp
  */
 angular.module('ribFrontendApp')
-  .controller('SignupCtrl', function () {
+  .controller('SignupCtrl', 'apiService', function (apiService) {
 
     
     this.inscription = function(){
     	
     	
     }
+    
   });

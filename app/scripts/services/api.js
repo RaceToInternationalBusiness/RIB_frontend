@@ -11,5 +11,19 @@ angular.module('ribFrontendApp').service('apiService', ['$http','urlService', fu
         }).success(success).error(error);
     };
     
+    this.listTeam = function(credentials,success,error){
+    	$http({
+            method: 'get',
+            url: urlService.listTeam()
+        }).success(success).error(error);
+    }
+    
+    this.createTeam = function(credentials,success,error){
+    	$http({
+            method: 'post',
+            url: urlService.listTeam()
+        }).success(success).error(error);
+    }
+    
     
 }]);

@@ -26,22 +26,22 @@
                     </fieldset>
                     <div class="col-md-12 list-container">
                         <ul>
-                            <li ng-repeat="team in teams" ng-click="select(team)" ng-class="{'selected':selected==team}">{{team}}</li>
+                            <li ng-repeat="team in teamChoice.teams" ng-click="teamChoice.select(team)" ng-class="{'selected':selected==team}">{{team}}</li>
                         </ul>
                     </div>
-                    <button ng-click="selectTeam()">Valider</button>
+                    <button ng-click="teamChoice.selectTeam()">Valider</button>
                 </div>
 				<div class="col-md-6">
                     <h4>Créer une équipe:</h4>
                     <fieldset class="form-group">
                         <label class=" control-label">Nom de l'équipe: </label>
                        
-                            <input class="form-control input-md" ng-model="team.name" type="text" placeholder="Ex:PoneyRocks"/>
+                            <input class="form-control input-md" ng-model="teamChoice.team.name" type="text" placeholder="Ex:PoneyRocks"/>
                         
                     </fieldset>
                     <fieldset class="form-group">
                         <label class=" control-label">Nombre de places: </label>
-                            <select ng-model="team.places" class="form-control input-md" >
+                            <select ng-model="teamChoice.team.places" class="form-control input-md" >
                                 <option  value="1" selected="selected">1 place</option>
                                 <option  value="2">2 places</option>
                                 <option  value="3">3 places</option>
@@ -49,7 +49,7 @@
                                 <option  value="5">5 places</option>
                             </select>
                     </fieldset>
-                    <button class="btn-action "ng-click="createTeam()">Créer</button>
+                    <button class="btn-action "ng-click="teamChoice.createTeam()">Créer</button>
                 </div>
 			</div> 
 		</div>

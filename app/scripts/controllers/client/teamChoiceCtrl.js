@@ -8,13 +8,41 @@
  * Controller of the ribFrontendApp
  */
 angular.module('ribFrontendApp')
-  .controller('TeamChoiceCtrl',['$scope', function ($scope) {
-    $scope.teams = ["Team 1","Team 2","Team 3","Team 4","Team 5","Team 6","Team 7","Team 8"];
-      $scope.team={places:"5"};
-      $scope.selected = null;
-      $scope.select = function(team)
-      {
-        console.log(team);
-          $scope.selected = team;
-      };
-  }]);
+  .controller('TeamChoiceCtrl',['apiService', function (apiService) {
+	
+    this.teams = [];
+    this.teamChoice.team.name = "";
+    this.team={places:"5"};
+    this.selected = null;
+
+    this.select = function(team){
+    	console.log(team);
+    	this.selected = team;
+    };
+    
+    
+    this.listTeam = function(){
+        apiService.listTeam({},function(data){
+        	
+        	angular.forEach(data, function(value, key){
+        	    this.teams.push(value.name);
+    	    });
+        	
+        },function(err){
+            console.error(err);
+        });
+    };
+    
+    this.createTeam = function(){
+        apiService.createTeam({name:this.teamChoice.team.name,session:$scope.password},function(data){
+        	
+
+        	
+        },function(err){
+            console.error(err);
+        });
+    };
+    
+    this.listTeam();
+    
+}]);
