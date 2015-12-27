@@ -10,7 +10,7 @@
 angular.module('ribFrontendApp').controller('DashboardCtrl', function (teamProfile) {
 
 	this.teamProfile = teamProfile;
-	  
+
 	this.numberOfMachines = 4;
 
 	this.getRemainTime = function(){
