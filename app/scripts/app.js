@@ -36,8 +36,8 @@ angular
       })
         .when('/client/signup/team', {
         templateUrl: 'views/client/team-choice.html',
-        controller: 'TeamChoiceCtrl',
-        controllerAs: 'teamChoice'
+        controller: 'SignupCtrl',
+        controllerAs: 'signup'
       })
       .when('/client/decision', {
         templateUrl: 'views/client/decision.html',

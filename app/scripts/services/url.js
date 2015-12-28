@@ -11,4 +11,6 @@ angular.module('ribFrontendApp').service('urlService', function () {
 
     this.createTeam = function(){ return this.host + '/teams/';};
 
+    this.addTeamMember = function(id){ return this.host + '/teams/' + id + '/members/';};
+
 });
