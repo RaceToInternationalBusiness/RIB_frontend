@@ -30,67 +30,7 @@ angular.module('ribFrontendApp')
 	  /*
 	   * team part
 	   */
-	  
-	  this.test = [
-	               {
-	            	    "_id": "aze153dsfsdfa1ea53",
-	            	    "name": "team1",
-	            	    "session": "ab512354c354e5b54f5c3a",
-	            	    "created": "2015-08-05T08:40:51.620Z",
-	            	    "members": [
-	            	      {
-	            	        "firstname": "Taylor",
-	            	        "lastname": "Swift",
-	            	        "email": "taylor.swift@gmail.com",
-	            	        "institution": "university"
-	            	      },
-	            	      {
-	            	        "firstname": "Nicolas",
-	            	        "lastname": "Loyd",
-	            	        "email": "nicolas.loyd@gmail.com"
-	            	      },
-	            	      {
-	            	        "firstname": "Paul",
-	            	        "lastname": "Klein",
-	            	        "email": "paul.klein@gmail.com"
-	            	      },
-	            	      {
-	            	        "firstname": "Alwin",
-	            	        "lastname": "Vouix",
-	            	        "email": "alwin.vouix@gmail.com"
-	            	      }
-	            	    ]
-	            	  },
-	            	  {
-	            	    "_id": "hgfhfg4fdgsfd12",
-	            	    "name": "JackTeam",
-	            	    "session": "ab512354c354e5b54f5c3a",
-	            	    "created": "2015-08-05T08:40:51.620Z",
-	            	    "members": [
-	            	      {
-	            	        "firstname": "Jacques",
-	            	        "lastname": "Black",
-	            	        "email": "jacques.black@gmail.com"
-	            	      },
-	            	      {
-	            	        "firstname": "Jack",
-	            	        "lastname": "Brel",
-	            	        "email": "jack.brel@gmail.com"
-	            	      },
-	            	      {
-	            	        "firstname": "Jake",
-	            	        "lastname": "Dexter",
-	            	        "email": "jake.dexter@gmail.com"
-	            	      },
-	            	      {
-	            	        "firstname": "Jak",
-	            	        "lastname": "Three",
-	            	        "email": "jak.three@gmail.com"
-	            	      }
-	            	    ]
-	            	  }
-	            	];
-	  
+	  	  
 	  this.teams = [];
 	  this.selected = '';
 	
@@ -106,18 +46,18 @@ angular.module('ribFrontendApp')
 	  }
     
 	  this.listTeam = function(){
-		  //apiService.listTeam({},function(data){
+		  apiService.listTeam({},function(data){
         	
-			  angular.forEach(this.test, function(value, key){
+			  angular.forEach(data, function(value, key){
 				  var temp = {};
 				  temp.name = value.name;
 				  temp.id = value._id;
 				  this.push(temp);
 			  }, this.teams);
         	console.log(this.teams);
-		 /* },function(err){
+		  },function(err){
 			  console.error(err);
-		 });*/
+		 });
 	  };
 	  this.listTeam();
 	  
