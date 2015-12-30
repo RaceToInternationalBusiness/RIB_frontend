@@ -63,10 +63,6 @@ angular
         templateUrl: 'views/admin/create-session.html',
         controller: 'CreateSessionCtrl'
       })
-     .when('/admin/create-product', {
-        templateUrl: 'views/admin/create-product.html',
-        controller: 'CreateProductCtrl'
-      })
      .when('/admin/create-market', {
         templateUrl: 'views/admin/create-market.html',
         controller: 'CreateMarketCtrl'
