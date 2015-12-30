@@ -5,8 +5,6 @@
 			<div class="page">
 				<img class="user-icon" src="images/account_circle.png"/> 
 				<p class="user-name">{{dashboard.teamProfile.teamName}}</p>
-				<p class="no-margin">CA actuel : {{dashboard.teamProfile.ca}}€</p>
-				<p class="no-margin">Bénéfice : {{dashboard.teamProfile.profit}}€</p>
 				<h3>Reminder</h3>
 				<p>Année N°{{dashboard.teamProfile.yearNumber}}</p>
 				<p  class="session-end">
@@ -23,7 +21,7 @@
 	<div class="row">
 		<div class="col-md-12 page">
 				<p class="vertical-alignement">Compléter la feuille de décision</p>				
-				<button class="pull-right access-button" ng-click="accessToDecisionSheet();">Accéder</button>
+				<button class="pull-right access-button" ng-click="dashboard.accessToDecisionSheet();">Accéder</button>
 			
 		</div>
 	</div>

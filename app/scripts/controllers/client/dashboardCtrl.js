@@ -7,7 +7,7 @@
  * # DashboardcontrollerCtrl
  * Controller of the ribFrontendApp
  */
-angular.module('ribFrontendApp').controller('DashboardCtrl', function (teamProfile) {
+angular.module('ribFrontendApp').controller('DashboardCtrl', ['$location', 'teamProfile', function ($location, teamProfile) {
 
 	this.teamProfile = teamProfile;
 
@@ -23,5 +23,9 @@ angular.module('ribFrontendApp').controller('DashboardCtrl', function (teamProfi
 	
 	this.askQuetion = function(){
 	
-	}
-});
+	};
+	
+	this.accessToDecisionSheet = function(){
+		$location.path('client/decision');
+	};
+}]);
