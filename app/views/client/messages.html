@@ -1,46 +1,23 @@
 <div class="col-md-3 side-panel">
 	<div class="row">
 		<div class="col-md-12">
-			<header></header>
+			<header>Informations</header>
 			<div class="page">
+				<p>
+					Si vous voulez contacter votre administrateur pour acheter une machine, n'oubliez pas que vous devez argumenter et justifier vos, sans quoi l'achat d'une nouvelle machine ne sera pas possible.
+				</p>
 			</div> 
 		</div>
 	</div>
 </div>
 
 <div class="col-md-9" >
-	<header>Messages</header>
-	<div class="row page">
-		<div class="message-scroll text-center">
-			<div style="width:100%">
-				<div class="row" ng-repeat="message in messages.messages">
-					<div class="col-md-1 no-margin no-padding">
-						<img class="pull-right" src="images/account_circle.png" ng-show="message.author == 'team'"/>
-					</div>
-				
-					<div class="col-md-10 adjust-message">
-						<p class="text-left {{message.author}}">
-							{{message.message}} 
-						</p>
-					</div>
-					
-					<div class="col-md-1 no-margin no-padding">
-						<img class="pull-left" src="images/account_circle.png" ng-show="message.author == 'admin'"/>
-					</div>
-				</div>				
-			</div>
-		</div>
-		
-		<form class="form-horizontal inscription" role="form">
-  			<div class="form-group no-margin">
-    			<div class="col-lg-10">
-    				<input class="form-control no-padding" id="question" placeholder="Posez votre question">
-    			</div>
-    			<div class="col-lg-2">
- 					<button ng-click="messages.create()" class="btn-action">Envoyer</button>
-    			</div>    			
-  			</div>
-  
-		</form>
+	<header>Contact</header>
+	<div class="row page text-center">
+		<p>
+			Pour contacter votre administrateur vous pouvez :<br>
+			Lui envoyer à l'adresse : <a href="mailto:monsieur.machin@gmail.com">monsieur.machin@gmail.com </a> <br>
+			Ou l'appeller au numéro : 06.66.00.66.60
+		</p>		
 	</div>
 </div>
