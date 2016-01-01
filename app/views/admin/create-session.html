@@ -3,10 +3,34 @@
 	
 	    <header>Navigation</header>
 			<div class="page no-padding">
-				<div class="btn-group btn-group-vertical btn-block">
-						<a ng-href="#/admin/create-market" class="btn btn-default button-group-not-selected">Créer marchés</a>
-						<a ng-href="#/admin/create-product" class="btn btn-default button-group-not-selected">Créer produits</a>
-				</div>
+				
+                
+                
+                <div class="dropdown">
+                      <button style="width:100%" class="btn btn-default btn-xs dropdown-toggle"   data-toggle="dropdown" >Session<p  id="caret" class="caret"></p>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                           <li ng-repeat="session in sessions"> 
+                              <a>{{session}}</a>
+                           </li>
+                           <li role="separator" class="divider"></li>
+                           <li><a >Créer session </a></li>
+                      </ul>
+                </div>
+
+                
+                <div class="dropdown">
+                      <button style="width:100%" class="btn btn-default btn-xs dropdown-toggle"   data-toggle="dropdown" >Marché<p  id="caret" class="caret"></p>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                          <li ng-repeat="market in markets">
+                          <a >{{market.name}}</a>
+                    </li>   
+                           <li role="separator" class="divider"></li>
+                           <li><a >Créer Marché </a></li>
+                      </ul>
+                </div>
+                
 			</div>
 		</div>
 </div>

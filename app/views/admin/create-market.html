@@ -1,246 +1,255 @@
 <div class="col-md-3 side-panel">
 	
-		<div class="col-md-12">
-            <header>Navigation</header>
-			
-			<div class="page no-padding">
-				
-                
-                
-                <div class="dropdown">
-                      <button style="width:270px" class="btn btn-default btn-xs dropdown-toggle"   data-toggle="dropdown" >Session<p  id="caret" class="caret"></p>
-                      </button>
-                      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                           <li ng-repeat="session in sessions"> 
-                              <a>{{session}}</a>
-                           </li>
-                           <li role="separator" class="divider"></li>
-                           <li><a >Créer session </a></li>
-                      </ul>
-                </div>
-
-                
-                <div class="dropdown">
-                      <button style="width:270px" class="btn btn-default btn-xs dropdown-toggle"   data-toggle="dropdown" >Marché<p  id="caret" class="caret"></p>
-                      </button>
-                      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                          <li ng-repeat="market in markets">
-                          <a >{{market}}</a>
-                    </li>   
-                           <li role="separator" class="divider"></li>
-                           <li><a >Créer Marché </a></li>
-                      </ul>
-                </div>
-                
+	<div class="col-md-12">
+		<header>Navigation</header>
+		<div class="page no-padding">
+			<div class="dropdown">
+				<button style="width:100%" class="btn btn-default btn-xs dropdown-toggle"   data-toggle="dropdown" >
+					Session
+					<p  id="caret" class="caret"></p>
+				</button>
+				<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+					<li ng-repeat="session in sessions"> 
+						<a>{{session}}</a>
+					</li>
+					
+					<li role="separator" class="divider"></li>
+					<li>
+						<a >Créer session </a>
+					</li>
+				</ul>
 			</div>
-        </div>
+
+			<div class="dropdown">
+				<button style="width:100%" class="btn btn-default btn-xs dropdown-toggle"   data-toggle="dropdown" >
+					Marché
+					<p  id="caret" class="caret"></p>
+				</button>
+
+				<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+					<li ng-repeat="market in markets">
+                    	<a >{{market}}</a>
+                    </li> 
+                      
+                    <li role="separator" class="divider"></li>
+                   	
+                   	<li>
+                   		<a >Créer Marché </a>
+                	</li>
+				</ul>
+			</div>
+                
+		</div>
+	</div>
 </div>
+
 <div class="col-md-9" >
 	<div class="row">
 		<div class="col-md-12">
 			<header>Marchés</header>
-            <div class="page col-md-12">    
-                
-                 <fieldset class="form-group">
-                        <div class="col-lg-1 col-md-offset-1 "><label >Nom: </label></div>
-				        <div class="col-md-4  col-md-offset-0"><input class="form-control" id="nom" placeholder="Nom du marché"></div>
-				  		</fieldset>
-                
-                
-                
+			<div class="page col-md-12">    
+				<fieldset class="form-group">
+					<div class="col-lg-1 col-md-offset-1 ">
+						<label >Nom: </label>
+					</div>
+				    
+				    <div class="col-md-4  col-md-offset-0"><input class="form-control" id="nom" placeholder="Nom du marché"></div>
+				</fieldset>
+				
 				<div class="col-md-6">
                 
-     <h5>Indices Marchandiseurs:</h5>
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          
-          <th>Nbre de Marchandiseurs</th>
-          <th>Indices</th>
-          <th></th>
-        </tr>
-      </thead> 
-     <tbody>
-        <tr ng-repeat="indicemarchandise in indicemarchandises">
-          <td>{{indicemarchandise.nbr}}</td>
-          <td>{{indicemarchandise.indice}}</td>
-          <td><input type="submit" class="btn btn-danger" ng-click="removemarchandise($index)" aria-label="Remove" value ="X"></td>
+					<h5>Indices Marchandiseurs:</h5>
+					<table class="table table-striped">
+						<thead>
+					        <tr>
+								<th>Nbre de Marchandiseurs</th>
+								<th>Indices</th>
+								<th></th>
+							</tr>
+						</thead> 
+						
+						<tbody>
+							<tr ng-repeat="indicemarchandise in indicemarchandises">
+								<td>{{indicemarchandise.nbr}}</td>
+								<td>{{indicemarchandise.indice}}</td>
+								<td>
+									<button class="btn btn-danger remove pull-right" ng-click="removemarchandise($index)">
+										<span class="glyphicon glyphicon-remove remove_icon" ></span>
+									</button>
+							</tr>
+						</tbody>
+					</table>    
+           
+           			<form class="form-inline" role="form"  ng-submit="addindicemarchandise(nombre,indicemarch)" id="indicenbr">
+						<div class="form-group">
+							<input type="number" style="width: 12em;" placeholder="Nombre" step="any" class="form-control" ng-model="nombre" />
+						</div>
+						
+						<div class="form-group">
+							<input type="number" style="width: 12em;" placeholder="Indice" step="any" class="form-control" ng-model="indicemarch" />
+						</div>
+						
+						<div class="form-group">
+							<button ng-click="ajouterNbMerchandiseur()" > Ajouter</button>
+						</div>    
+					</form>      
+				</div>
 
-        </tr>
-      </tbody>
-    </table>    
-           <form class="form-inline" role="form"  ng-submit="addindicemarchandise(nombre,indicemarch)" id="indicenbr">
-               
- 
-                   <div class="form-group">
-                    <input type="number" style="width: 12em;" placeholder="Nombre" step="any" class="form-control" ng-model="nombre" />
-                   </div>
-                   <div class="form-group">
-                    <input type="number" style="width: 12em;" placeholder="Indice" step="any" class="form-control" ng-model="indicemarch" />
-                   </div>
-                    <div class="form-group">
-                        <input type="submit" class="btn btn-primary" value="Ajouter" >
-                    </div>    
-          </form>      
-            </div>
-                <div class="col-md-6">
-                
-     <h5>Délais de paiement :</h5>
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          
-          
-          <th>Délais</th>
-          <th>Indices</th>
-          <th></th>
-        </tr>
-      </thead> 
-     <tbody>
-     <tr ng-repeat="indicepaiement in indicepaiements">
-          <td>{{indicepaiement.delai}}</td>
-          <td>{{indicepaiement.indicedel}}</td>
-          <td><input type="submit" class="btn btn-danger" ng-click="removepaiement($index)" aria-label="Remove" value ="X"></td>
-
-        </tr>
-      </tbody>
-    </table>    
-           <form class="form-inline" role="form"  ng-submit="addindicepaiement(delais, indicedel)" id="indiceprix">
-               
- 
-                   <div class="form-group">
-                    <input type="number" style="width: 12em;" placeholder="Délais" step="any" class="form-control" ng-model="delais" />
-                   </div>
-                   <div class="form-group">
-                    <input type="number" style="width: 12em;" placeholder="Indice" step="any" class="form-control" ng-model="indicedel" />
-                   </div>
-                    
-               
-               
-            <div class="form-group">
-                        <input type="submit" class="btn btn-primary" value="Ajouter" >
-                    </div> 
+				<div class="col-md-6">
+					<h5>Délais de paiement :</h5>
+					<table class="table table-striped">
+						<thead>
+							<tr>
+								<th>Délais</th>
+								<th>Indices</th>
+								<th></th>
+							</tr>
+						</thead> 
+						
+						<tbody>
+							<tr ng-repeat="indicepaiement in indicepaiements">
+								<td>{{indicepaiement.delai}}</td>
+								<td>{{indicepaiement.indicedel}}</td>
+								<td>
+                     				<button class="btn btn-danger remove pull-right" ng-click="removepaiement($index)">
+										<span class="glyphicon glyphicon-remove" ></span>
+									</button>
+								</td>
+							</tr>
+						</tbody>
+   					</table>    
+					
+					<form class="form-inline" role="form"  ng-submit="addindicepaiement(delais, indicedel)" id="indiceprix">
+						<div class="form-group">
+							<input type="number" style="width: 12em;" placeholder="Délais" step="any" class="form-control" ng-model="delais" />
+						</div>
+						
+						<div class="form-group">
+							<input type="number" style="width: 12em;" placeholder="Indice" step="any" class="form-control" ng-model="indicedel" />
+						</div>
+						
+						<div class="form-group">
+                        	<button ng-click="ajouter()" > Ajouter</button>
+						</div> 
                        
-          </form>  
-                            <div>
-                                <br>
-							<button ng-click="addMarket()" class="btn-action pull-right">Valider</button>	
-						    </div>
-            </div> 
+					</form>  
+					
+					<div>
+		            	<br>
+						<button ng-click="addMarket()" class="btn-action pull-right">Valider</button>	
+			    	</div>
+           		</div> 
                 
-                        
-                
-            
-              
-            <div class="col-md-9" >
-                    <div class="row">
-                <h5>Liste des Produits:</h5>
-                </div>
-            	
-        
-                    </br>
- <div class="col-md-12 list-container">
-                        <ul>
-                            <li ng-repeat="product in products" ng-click="select(product)" ng-class="{'selected':selected==product}">                                           {{product}}
-                            
-                                <input type="submit" class="btn btn-danger pull-right" ng-click="removeProduct($index)" aria-label="Remove" value ="x">
-                               
-                            </li>
+				<div class="col-md-9" >
+                	<div class="row">
+                		<h5>Liste des Produits:</h5>
+                	</div>
+					</br>
+					
+					<div class="col-md-12 list-container">
+						<ul>
+							<li ng-repeat="product in products" ng-click="select(product)" ng-class="{'selected':selected==product}">                                           {{product}}
+								<button class="btn btn-danger remove" ng-click="removeProduct($index)">
+									<span class="glyphicon glyphicon-remove" ></span>
+								</button>
+							</li>
                         </ul>
-                    </div>
+                    </div>       
+          
+					<button ng-click="ajouterDelaiPaiement()" > Ajouter</button>
+         		</div> 
         
- </form>
-       
-          
-            <button ng-click="toggle()" class="btn btn-primary pull-right " >Ajouter</button>
-         </div> 
-        <div ng-show="myVar">
-				
-                    <div class="col-md-12">
-                <fieldset class="form-group">
-                        <div class="col-lg-1 col-md-offset-1 "><label >Nom: </label></div>
-				        <div class="col-md-4  col-md-offset-0"><input class="form-control" id="nom" placeholder="Nom du produit"></div>
+        		<div ng-show="myVar">
+					<div class="col-md-12">
+                		<fieldset class="form-group">
+                        	<div class="col-lg-1 col-md-offset-1 ">
+                        		<label >Nom: </label>
+                       		</div>
+				        	
+				        	<div class="col-md-4  col-md-offset-0"><input class="form-control" id="nom" placeholder="Nom du produit"></div>
 				  		</fieldset>
-                        <div class="col-md-6">
-     <h5>Indices Prix:</h5>
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          
-          <th>Prix</th>
-          <th>Indices</th>
-          <th></th>
-        </tr>
-      </thead> 
-     <tbody>
-        <tr ng-repeat="indicepri in indiceprix">
-          <td>{{indicepri.prix}}</td>
-          <td>{{indicepri.indicep}}</td>
-          <td><input type="submit" class="btn btn-danger" ng-click="removeprix($index)" aria-label="Remove" value ="X"></td>
-
-        </tr>
-      </tbody>
-    </table>    
-           <form class="form-inline" role="form"  ng-submit="addindiceprix(price, indicprix)" id="indicenbr">
-               
- 
-                   <div class="form-group">
-                    <input type="number" style="width: 12em;" placeholder="prix" class="form-control" step="any" ng-model="price" />
-                   </div>
-                   <div class="form-group">
-                    <input type="number" style="width: 12em;" placeholder="Indice" class="form-control" step="any" ng-model="indicprix" />
-                   </div>
-                    <div class="form-group">
-                        <input type="submit" class="btn btn-primary" value="Ajouter" >
-                    </div>    
-          </form>      
-            </div>
-                <div class="col-md-6">
-                
-     <h5>Influence publicité:</h5>
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th>Pourcentage du chiffre d'affaire</th>
-          <th>Indices</th>
-          <th></th>
-        </tr>
-      </thead> 
-     <tbody>
-        <tr ng-repeat="indicpourcentage in indicpourcentagepub">
-          <td>{{indicpourcentage.pourcentage}}</td>
-          <td>{{indicpourcentage.indicepub}}</td>
-          <td><input type="submit" class="btn btn-danger" ng-click="removepub($index)" aria-label="Remove" value ="X"></td>
-
-        </tr>
-      </tbody>
-    </table>    
-           <form class="form-inline" role="form"  ng-submit="addindicepub(prpub, indicepb)" id="indicenbr">
-               
- 
-                   <div class="form-group">
-                    <input type="number" style="width: 12em;" placeholder="Pourcentage" class="form-control" step="any" ng-model="prpub" />
-                   </div>
-                   <div class="form-group">
-                    <input type="number" style="width: 12em;" placeholder="Indice" class="form-control" step="any" ng-model="indicepb" />
-                   </div>
-                    <div class="form-group">
-                        <input type="submit" class="btn btn-primary" value="Ajouter" >
-                    </div>    
-           </form>  
-                    <div>
-                            <br>
-							<button ng-click="addProduct()" class="btn-action pull-right">Valider</button>	
-                    </div>
-                    </div>
-            </div>
-                        </div>
-
-                        </div>
-             
-    </div>
- 
-
-
-
-   
+				  		
+						<div class="col-md-6">
+							<h5>Indices Prix:</h5>
+							<table class="table table-striped">
+								<thead>
+									<tr>
+										<th>Prix</th>
+										<th>Indices</th>
+										<th></th>
+									</tr>
+								</thead> 
+								
+								<tbody>
+									<tr ng-repeat="indicepri in indiceprix">
+										<td>{{indicepri.prix}}</td>
+										<td>{{indicepri.indicep}}</td>
+										<td>
+											<button class="btn btn-danger remove pull-right" ng-click="removeprix($index)">
+												<span class="glyphicon glyphicon-remove remove_icon" ></span>
+											</button>
+										</td>
+									</tr>
+      							</tbody>
+							</table>    
+           
+							<form class="form-inline" role="form"  ng-submit="addindiceprix(price, indicprix)" id="indicenbr">
+								<div class="form-group">
+									<input type="number" style="width: 12em;" placeholder="prix" class="form-control" step="any" ng-model="price" />
+								</div>
+								
+								<div class="form-group">
+									<input type="number" style="width: 12em;" placeholder="Indice" class="form-control" step="any" ng-model="indicprix" />
+								</div>
+								
+								<div class="form-group">
+									<button ng-click="ajouterProduits()" > Ajouter</button>
+								</div>    
+							</form>      
+						</div>
+						
+						<div class="col-md-6">
+							<h5>Influence publicité:</h5>
+							<table class="table table-striped">
+								<thead>
+									<tr>
+										<th>Pourcentage du chiffre d'affaire</th>
+										<th>Indices</th>
+										<th></th>
+									</tr>
+								</thead> 
+								
+								<tbody>
+									<tr ng-repeat="indicpourcentage in indicpourcentagepub">
+										<td>{{indicpourcentage.pourcentage}}</td>
+										<td>{{indicpourcentage.indicepub}}</td>
+									</tr>
+								</tbody>
+							</table>    
+           					
+           					<form class="form-inline" role="form"  ng-submit="addindicepub(prpub, indicepb)" id="indicenbr">
+								<div class="form-group">
+									<input type="number" style="width: 12em;" placeholder="Pourcentage" class="form-control" step="any" ng-model="prpub" />
+								</div>
+								
+								<div class="form-group">
+									<input type="number" style="width: 12em;" placeholder="Indice" class="form-control" step="any" ng-model="indicepb" />
+								</div>
+								
+								<div class="form-group">
+									<input type="submit" class="btn btn-primary" value="Ajouter" >
+								</div>   
+								 
+							</form>  
+							
+							<div>
+								<br>
+								<button ng-click="addProduct()" class="btn-action pull-right">Valider</button>	
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>   

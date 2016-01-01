@@ -17,15 +17,20 @@ angular.module('ribFrontendApp').controller('DashboardCtrl', ['$location', 'team
 		teamProfile
 	};
 	
-	this.buyMachine = function(){
-	
+	this.sendMessage = function(){
+		$location.path('client/messages');
 	};
 	
-	this.askQuetion = function(){
-	
-	};
 	
 	this.accessToDecisionSheet = function(){
 		$location.path('client/decision');
 	};
+	
+	this.allYear = function(){
+		return new Array(teamProfile.maxYear);
+	}
+	
+	this.getYearResult = function(year){
+		$location.path('client/results/').search({choosenYear: year});;
+	}
 }]);

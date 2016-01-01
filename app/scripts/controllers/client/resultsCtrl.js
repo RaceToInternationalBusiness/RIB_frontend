@@ -8,9 +8,11 @@
  * Controller of the ribFrontendApp
  */
 angular.module('ribFrontendApp')
-  .controller('ResultsCtrl', function (teamProfile) {
+  .controller('ResultsCtrl',['$routeParams', 'teamProfile', 'apiService', function ($routeParams, teamProfile, apiService) {
 	  
 	this.teamProfile = teamProfile;
+	
+	this.result = {};
 		
 	this.productionCapacity = 1000;
 	
@@ -39,6 +41,21 @@ angular.module('ribFrontendApp')
 	
 	this.getRemainTime = function(){
 		return "6 Heures 38 Minutes";
-	}
+	};
+	
+	this.getResult = function(){
+		apiService.getResults(this.teamProfile.teamId, {}, function(data){
+        	
+			  angular.forEach(data, function(value, key){
+				  if(value.year == $routeParams.choosenYear){
+					  this.result = value;
+				  }
+			  }, this);
+		  },function(err){
+			  console.error(err);
+		 });
+	};
+	
+	this.getResult();
 
-  });
+  }]);

@@ -76,9 +76,11 @@ angular.module('ribFrontendApp').factory('teamProfile', function(){
 	
 	var profile = {};
 	profile.teamName = 'Shark team';
+	profile.teamId = "lkj12";
 	profile.ca = 200000;
 	profile.profit = -301000;
 	profile.yearNumber = 3;
+	profile.maxYear = 6;
 
 	return profile;
 			

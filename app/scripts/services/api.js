@@ -30,6 +30,13 @@ angular.module('ribFrontendApp').service('apiService', ['$http','urlService', fu
             method: 'post',
             url: urlService.addTeamMember(id)
         }).success(success).error(error);
-    }    
+    } 
+    
+    this.getResults = function(id, credentials, success, error){
+    	$http({
+            method: 'get',
+            url: urlService.getResults(id)
+        }).success(success).error(error);
+    } 
     
 }]);
