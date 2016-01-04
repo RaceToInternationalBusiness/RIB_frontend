@@ -4,20 +4,9 @@
 		<header>Navigation</header>
 		<div class="page no-padding">
 			<div class="dropdown">
-				<button style="width:100%" class="btn btn-default btn-xs dropdown-toggle"   data-toggle="dropdown" >
-					Session
-					<p  id="caret" class="caret"></p>
+				<button style="width:100%" class="btn btn-default btn-xs dropdown-toggle" ng-click="#/admin/create-session" >
+					Créer session
 				</button>
-				<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-					<li ng-repeat="session in sessions"> 
-						<a>{{session}}</a>
-					</li>
-					
-					<li role="separator" class="divider"></li>
-					<li>
-						<a >Créer session </a>
-					</li>
-				</ul>
 			</div>
 
 			<div class="dropdown">
@@ -30,7 +19,7 @@
 					<li ng-repeat="market in markets">
                     	<a >{{market}}</a>
                     </li> 
-                      
+                      	
                     <li role="separator" class="divider"></li>
                    	
                    	<li>
@@ -45,7 +34,6 @@
 
 <div class="col-md-9" >
 	<div class="row">
-		<div class="col-md-12">
 			<header>Marchés</header>
 			<div class="page col-md-12">    
 				<fieldset class="form-group">
@@ -82,11 +70,11 @@
            
            			<form class="form-inline" role="form"  ng-submit="addindicemarchandise(nombre,indicemarch)" id="indicenbr">
 						<div class="form-group">
-							<input type="number" style="width: 12em;" placeholder="Nombre" step="any" class="form-control" ng-model="nombre" />
+							<input type="number" style="width: 12em;" placeholder="Nombre" step="any" class="form-control" ng-model="nombre" min="0" />
 						</div>
 						
 						<div class="form-group">
-							<input type="number" style="width: 12em;" placeholder="Indice" step="any" class="form-control" ng-model="indicemarch" />
+							<input type="number" style="width: 12em;" placeholder="Indice" step="any" class="form-control" ng-model="indicemarch" min="0" />
 						</div>
 						
 						<div class="form-group">
@@ -121,11 +109,11 @@
 					
 					<form class="form-inline" role="form"  ng-submit="addindicepaiement(delais, indicedel)" id="indiceprix">
 						<div class="form-group">
-							<input type="number" style="width: 12em;" placeholder="Délais" step="any" class="form-control" ng-model="delais" />
+							<input type="number" style="width: 12em;" placeholder="Délais" step="any" class="form-control" ng-model="delais" min="0" />
 						</div>
 						
 						<div class="form-group">
-							<input type="number" style="width: 12em;" placeholder="Indice" step="any" class="form-control" ng-model="indicedel" />
+							<input type="number" style="width: 12em;" placeholder="Indice" step="any" class="form-control" ng-model="indicedel" min="0" />
 						</div>
 						
 						<div class="form-group">
@@ -160,7 +148,7 @@
          		</div> 
         
         		<div ng-show="myVar">
-					<div class="col-md-12">
+					<div class=" col-md-12">
                 		<fieldset class="form-group">
                         	<div class="col-lg-1 col-md-offset-1 ">
                         		<label >Nom: </label>
@@ -195,11 +183,11 @@
            
 							<form class="form-inline" role="form"  ng-submit="addindiceprix(price, indicprix)" id="indicenbr">
 								<div class="form-group">
-									<input type="number" style="width: 12em;" placeholder="prix" class="form-control" step="any" ng-model="price" />
+									<input type="number" style="width: 12em;" placeholder="prix" class="form-control" step="any" ng-model="price"  min="0"/>
 								</div>
 								
 								<div class="form-group">
-									<input type="number" style="width: 12em;" placeholder="Indice" class="form-control" step="any" ng-model="indicprix" />
+									<input type="number" style="width: 12em;" placeholder="Indice" class="form-control" step="any" ng-model="indicprix" min="0" />
 								</div>
 								
 								<div class="form-group">
@@ -223,31 +211,33 @@
 									<tr ng-repeat="indicpourcentage in indicpourcentagepub">
 										<td>{{indicpourcentage.pourcentage}}</td>
 										<td>{{indicpourcentage.indicepub}}</td>
+                                        <td>
+                                            <button class="btn btn-danger remove pull-right" ng-click="removeprix($index)">
+												<span class="glyphicon glyphicon-remove remove_icon" ></span>
+											</button>
+                                        </td>    
 									</tr>
 								</tbody>
 							</table>    
            					
            					<form class="form-inline" role="form"  ng-submit="addindicepub(prpub, indicepb)" id="indicenbr">
 								<div class="form-group">
-									<input type="number" style="width: 12em;" placeholder="Pourcentage" class="form-control" step="any" ng-model="prpub" />
+									<input type="number" style="width: 12em;" placeholder="Pourcentage" class="form-control" step="any" ng-model="prpub" min="0" />
 								</div>
 								
 								<div class="form-group">
-									<input type="number" style="width: 12em;" placeholder="Indice" class="form-control" step="any" ng-model="indicepb" />
+									<input type="number" style="width: 12em;" placeholder="Indice" class="form-control" step="any" ng-model="indicepb" min="0" />
 								</div>
-								
-								<div class="form-group">
-									<input type="submit" class="btn btn-primary" value="Ajouter" >
-								</div>   
-								 
-							</form>  
-							
+                                <div class="form-group">
+									<button ng-click="ajouterProduits()" > Ajouter</button>
+								</div>
+                           								 
+							</form>
 							<div>
 								<br>
 								<button ng-click="addProduct()" class="btn-action pull-right">Valider</button>	
 							</div>
-						</div>
-					</div>
+                     </div>		
 				</div>
 			</div>
 		</div>

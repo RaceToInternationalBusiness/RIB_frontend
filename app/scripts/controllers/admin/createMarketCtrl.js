@@ -2,7 +2,7 @@ angular.module('ribFrontendApp')
   .controller('CreateMarketCtrl', function ($scope) {
     
     $scope.myVar = false;
-    $scope.toggle = function() {
+    $scope.ajouterDelaiPaiement = function() {
         $scope.myVar = !$scope.myVar;
     };
     
